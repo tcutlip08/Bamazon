@@ -1,0 +1,24 @@
+{
+  "name": "Bamazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcutlip08/Bamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tcutlip08/Bamazon/issues"
+  },
+  "homepage": "https://github.com/tcutlip08/Bamazon#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "mysql": "^2.17.1"
+  }
+}
