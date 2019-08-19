@@ -1,5 +1,5 @@
 {
-  "name": "Bamazon",
+  "name": "bamazon",
   "version": "1.0.0",
   "description": "",
   "main": "run.js",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/tcutlip08/Bamazon#readme",
   "dependencies": {
     "dotenv": "^8.0.0",
+    "inquirer": "^6.5.1",
     "mysql": "^2.17.1"
   }
 }
