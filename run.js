@@ -1,6 +1,7 @@
 require("dotenv").config();
 var mysql = require('mysql');
 var inquirer = require('inquirer');
+var Table = require('cli-table');
 
 var password = process.env.password
 
@@ -95,19 +96,29 @@ function confirmPurchase(id, sQuan, rQuan) {
             console.log("Sorry for the inconvenience");
             start();
         }
-
-
     });
 }
 
 function displayProducts() {
     connection.query('SELECT * FROM products', function (err, res) {
         if (err) throw err;
-        console.log("====================");
-        for (let i = 0; i < Object.keys(res).length; i++) {
-            console.log("ID: " + res[i].item_id + " | " + res[i].product_name + " | Price: $" + res[i].price + " | Quantity Left: " + res[i].stock_quantity);
+
+        var table = new Table({
+            head: ['Item ID', 'Product', 'Price', 'Quantity'],
+            colWidths: [10, 30, 30, 30]
+        });
+
+        for (let i = 0; i < res.length; i++) {
+            table.push([res[i].item_id, res[i].product_name, res[i].price, res[i].stock_quantity])
         }
-        console.log("====================");
+
+        console.log(table.toString());
+
+        // console.log("====================");
+        // for (let i = 0; i < Object.keys(res).length; i++) {
+        //     console.log("ID: " + res[i].item_id + " | " + res[i].product_name + " | Price: $" + res[i].price + " | Quantity Left: " + res[i].stock_quantity);
+        // }
+        // console.log("====================");
 
         greetCustomer();
     });
