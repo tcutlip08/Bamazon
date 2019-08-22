@@ -12,6 +12,7 @@ var connection = mysql.createConnection({
     password: password,
     database: 'bamazon_db'
 });
+
 connection.connect(function (err) {
     if (err) throw err;
     // console.log('connected as id ' + connection.threadId);
@@ -66,8 +67,9 @@ function greetCustomer() {
                 confirmPurchase(data.item, res[0].stock_quantity, data.quantity);
             } else {
                 console.log("====================");
-                console.log("Sorry, we currently don't have enough in stock");
+                console.log("Sorry, we currently don't have enough in stock. Please enter a lower amount");
                 console.log("====================");
+                greetCustomer();
             }
         });
     });
