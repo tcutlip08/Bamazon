@@ -31,7 +31,9 @@ function start() {
         if (data.confirm === true) {
             displayProducts();
         } else {
+            console.log("====================");
             console.log("Have a nice day!");
+            console.log("====================");
             connection.end();
         }
     });
@@ -63,7 +65,9 @@ function greetCustomer() {
                 console.log("====================");
                 confirmPurchase(data.item, res[0].stock_quantity, data.quantity);
             } else {
+                console.log("====================");
                 console.log("Sorry, we currently don't have enough in stock");
+                console.log("====================");
             }
         });
     });
@@ -109,7 +113,7 @@ function displayProducts() {
         });
 
         for (let i = 0; i < res.length; i++) {
-            table.push([res[i].item_id, res[i].product_name, res[i].price, res[i].stock_quantity])
+            table.push([res[i].item_id, res[i].product_name, "$" + res[i].price, res[i].stock_quantity])
         }
 
         console.log(table.toString());
