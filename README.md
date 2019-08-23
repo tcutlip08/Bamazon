@@ -28,7 +28,7 @@ This app is meant to allow a customer to buy items we have in stock. As they go 
 
 #### Images for Proof
 
-![1](/images/Snip 1.PNG)
-![2](/images/Snip 2.PNG)
-![3](/images/Snip 3.PNG)
-![4](/images/Snip 4.PNG)
+![1](/images/Snip1.PNG)
+![2](/images/Snip2.PNG)
+![3](/images/Snip3.PNG)
+![4](/images/Snip4.PNG)
