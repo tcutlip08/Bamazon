@@ -25,3 +25,10 @@ This app is meant to allow a customer to buy items we have in stock. As they go 
 * Start() Prompts the user to confirm they would like to continue on with the app.
 * Assuming the user would like to use the rest of the app the Start() chains into another function
 * Every function has a specific task to execute, and at the end of each function it calls another prompting the user with more questions for possible purchases
+
+#### Images for Proof
+
+![1](/images/Snip 1.PNG)
+![2](/images/Snip 2.PNG)
+![3](/images/Snip 3.PNG)
+![4](/images/Snip 4.PNG)
